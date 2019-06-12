@@ -1,0 +1,1 @@
+create table enseignant of t_enseignant;

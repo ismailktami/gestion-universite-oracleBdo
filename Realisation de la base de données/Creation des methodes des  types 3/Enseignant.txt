@@ -1,0 +1,37 @@
+create or replace
+type body t_etudiant as
+constructor function t_etudiant return self as result as
+begin
+return;
+end;
+OVERRIDING member function tostring return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from etudiants;
+return l_rc;
+end tostring;
+OVERRIDING member function deleteperson(pers_cin varchar) return number as n number;
+begin
+delete from etudiants pr where pr.cin=pers_cin;
+return 1;
+end deleteperson;
+
+member function updateetudiant(et t_etudiant) return NUMBER as n number;
+begin 
+update etudiants set firstname=et.firstname, lastname=et.lastname, email=et.email,phone=et.phone, birthdate=et.birthdate, birthplace=et.birthplace, ref_filiere=et.ref_filiere ,niveau=et.niveau   where cin=et.cin;
+return 1;
+end updateetudiant;
+
+member function updateetudiante(et t_etudiant,p t_person) return NUMBER as n number;
+begin 
+update etudiants set firstname=p.firstname, lastname=p.lastname, email=p.email,phone=p.phone, birthdate=p.birthdate, birthplace=p.birthplace, ref_filiere=et.ref_filiere where cin=p.cin;
+return 1;
+end updateetudiante;
+
+
+member function getNotes(pers_cin varchar) return sys_refcursor  as  l_rc sys_refcursor;
+begin 
+open l_rc for select deref(ref_etudiant).firstname as nom ,(sum(note)/count(note)) as note_module,count(note) as nombre_element,deref(deref(ref_element).refmodule).nom as nom_module from notes where  deref(ref_etudiant).cne= pers_cin  group by deref(deref(ref_element).refmodule).nom,deref(ref_etudiant).firstname ;
+return l_rc;
+end getNotes;
+
+end;

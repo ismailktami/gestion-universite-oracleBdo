@@ -1,0 +1,26 @@
+create or replace type body t_salle as
+constructor function t_salle return self as result as
+begin
+return;
+end;
+member function updatesalle(salle t_salle) return number as n number;
+begin
+update salles set nbrplace=salle.nbrplace , ref_filiere= salle.ref_filiere where numsale=salle.numsale;
+return 1;
+end updatesalle;
+member function deletesalle(numsalle number) return number as n number;
+begin
+delete from salles s where s.numsale=numsalle;
+return 1;
+end deletesalle;
+member function tostring return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from salles;
+return l_rc;
+end tostring;
+member function getsalle(numsalle number) return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from salles s where s.numsale=numsalle;
+return l_rc;
+end getsalle;
+end;

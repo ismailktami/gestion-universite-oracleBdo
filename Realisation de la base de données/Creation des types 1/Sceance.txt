@@ -1,0 +1,8 @@
+create or replace
+type t_sceance as object (
+id_sceance number,
+refelement ref t_element,
+refenseignant ref t_enseignant,
+refsalle ref t_salle,
+datesceance date
+)

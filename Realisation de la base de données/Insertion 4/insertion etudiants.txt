@@ -1,0 +1,12 @@
+insert into etudiants values('ktami','ismail','fes maroc','11/11/1997','cd587587','0611111111','ktamiismail@gmail.com','cd587587',1,null);
+insert into etudiants values('mzari','hamid','fes maroc','11/11/1997','cd587586','0611111111','mzari','hamid@gmail.com','cd587586',1,null);
+insert into etudiants values('benzakri','maha','fes maroc','11/11/1997','cd587585','0611111111','benzakri@gmail.com','cd587585',1,null);
+insert into etudiants values('khidr','saad','fes maroc','11/11/1997','cd587584','0611111111','khidr@gmail.com','cd587584',1,null);
+insert into etudiants values('mousawi','amine','fes maroc','11/11/1997','cd587583','0611111111','mousawi@gmail.com','cd587583',1,null);
+insert into etudiants values('khalfi','intissar','fes maroc','11/11/1997','cd587582','0611111111','khalfi@gmail.com','cd587582',1,null);
+insert into etudiants values('berrada','mohamed','fes maroc','11/11/1997','cd587581','0611111111','berrada@gmail.com','cd587581',1,null);
+insert into etudiants values('chihad','abdo','fes maroc','11/11/1997','cd587580','0611111111','chihad@gmail.com','cd587580',1,null);
+insert into etudiants values('aferyad','haytam','fes maroc','11/11/1997','cd587579','0611111111','aferyad@gmail.com','cd587579',1,null);
+insert into etudiants values('moubarak','housni','fes maroc','11/11/1997','cd587578','0611111111','moubarak@gmail.com','cd587578',1,null);
+insert into etudiants values('abaydi','yahya','fes maroc','11/11/1997','cd587577','0611111111','abaydi@gmail.com','cd587577',1,null);
+insert into etudiants values('haddadi','youssef','fes maroc','11/11/1997','cd587576','0611111111','haddadi@gmail.com','cd587576',1,null);

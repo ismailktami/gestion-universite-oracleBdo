@@ -1,0 +1,6 @@
+create or replace type t_note as object(
+date_evaluation date,
+note float,
+ref_etudiant ref t_etudiant,
+ref_element  ref t_element 
+)

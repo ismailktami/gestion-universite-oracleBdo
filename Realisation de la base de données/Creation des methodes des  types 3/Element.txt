@@ -1,0 +1,27 @@
+create or replace type body t_element as
+constructor function t_element return self as result as
+begin
+return;
+end;
+member function updateelement(element t_element ) return number as n number;
+begin
+update elements set nom=element.nom , refmodule= element.refmodule where id_element=element.id_element;
+return 1;
+end updateelement;
+member function deleteelement(numelement number) return number as n number;
+begin
+delete from elements s where s.id_element=numelement;
+return 1;
+end deleteelement;
+member function tostring return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from elements;
+return l_rc;
+end tostring;
+
+member function getelement(numelement number) return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from elements s where s.id_element=numelement;
+return l_rc;
+end getelement;
+end;

@@ -1,0 +1,1 @@
+create table salles of t_salle(id_salle);

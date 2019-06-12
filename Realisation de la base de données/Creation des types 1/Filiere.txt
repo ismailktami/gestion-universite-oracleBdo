@@ -1,0 +1,13 @@
+create or replace type t_filiere as object
+(
+id_filiere number(11),
+nom varchar2(20),
+responsabe ref t_enseignant,
+modules tab_modules
+)
+ alter type t_filiere add  constructor function t_filiere return  self  as result cascade
+ alter type t_filiere add member function updatefiliere(filiere t_filiere ) return number cascade
+ alter type t_filiere add member function deleteefiliere(numfiliere number) return number cascade
+ alter type t_filiere add member function tostring return sys_refcursor cascade
+ alter type t_filiere add member function getfiliere(numfiliere number) return sys_refcursor CASCADE
+ 

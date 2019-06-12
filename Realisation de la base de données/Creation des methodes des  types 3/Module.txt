@@ -1,0 +1,29 @@
+create or replace type body t_module as
+constructor function t_module return self as result as
+begin
+return;
+end;
+member function updatemodule(module t_module ) return number as n number;
+begin
+update modules set nom=module.nom , ref_filiere= module.ref_filiere ,niveau=module.niveau where id_module=module.id_module;
+return 1;
+end updatemodule;
+member function deleteemodule(nummodule number) return number as n number;
+begin
+delete from elements e where deref(e.refmodule).id_module=nummodule;
+delete from modules s where s.id_module=nummodule;
+
+return 1;
+end deleteemodule;
+member function tostring return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from modules;
+return l_rc;
+end tostring;
+
+member function getmodule(nummodule number) return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from modules s where s.id_module=nummodule;
+return l_rc;
+end getmodule;
+end;

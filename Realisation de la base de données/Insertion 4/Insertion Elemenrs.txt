@@ -1,0 +1,26 @@
+insert into elements values(1,'c',(select ref(m) from modules m where m.nom='programmation1' ));
+insert into elements values(2,'c++',(select ref(m) from modules m where m.nom='programmation1' ));
+insert into elements values(3,'java',(select ref(m) from modules m where m.nom='developement desktop' ));
+insert into elements values(4,'c#',(select ref(m) from modules m where m.nom='developement desktop' ));
+insert into elements values(5,'tcp/ip',(select ref(m) from modules m where m.nom='reseaux1' ));
+insert into elements values(6,'reseaux locals',(select ref(m) from modules m where m.nom='reseaux1' ));
+insert into elements values(7,'jee',(select ref(m) from modules m where m.nom='developement web' ));
+insert into elements values(8,'.net',(select ref(m) from modules m where m.nom='developement web' ));
+insert into elements values(9,'tec',(select ref(m) from modules m where m.nom='tec_anglais' ));
+insert into elements values(10,'anglais',(select ref(m) from modules m where m.nom='tec_anglais' ));
+insert into elements values(11,'arch logiciel',(select ref(m) from modules m where m.nom='archit_logiciel' ));
+insert into elements values(12,'administration',(select ref(m) from modules m where m.nom='réseaux2' ));
+insert into elements values(13,'cisco1',(select ref(m) from modules m where m.nom='réseaux2' ));
+
+insert into elements values(14,'reseaux3',(select ref(m) from modules m where m.nom='telecom' )); 
+insert into elements values(15,'oracle',(select ref(m) from modules m where m.nom='oracle' )); 
+insert into elements values(16,'BI',(select ref(m) from modules m where m.nom='BI' )); 
+insert into elements values(17,'icm',(select ref(m) from modules m where m.nom='embarques2' )); 
+insert into elements values(18,'carte embarquee',(select ref(m) from modules m where m.nom='embarques2' )); 
+insert into elements values(19,'anglais',(select ref(m) from modules m where m.nom='tec_anglais3' )); 
+insert into elements values(25,'tec',(select ref(m) from modules m where m.nom='tec_anglais3' )); 
+insert into elements values(21,'android',(select ref(m) from modules m where m.nom='app mobile' )); 
+insert into elements values(22,'ionic',(select ref(m) from modules m where m.nom='app hybride' )); 
+insert into elements values(23,'test unitaire',(select ref(m) from modules m where m.nom='test unitaire' )); 
+
+

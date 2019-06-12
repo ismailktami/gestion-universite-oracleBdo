@@ -1,0 +1,13 @@
+
+create table modules of t_module(primary key(id_module));
+
+create or replace type tab_elements as varray(2) of  t_element;
+
+create type tab_modules as varray(32) of ref t_module;
+
+create table filieres of t_filiere;
+
+
+create table modules of t_module;
+
+

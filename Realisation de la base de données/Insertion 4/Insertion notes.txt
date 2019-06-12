@@ -1,0 +1,28 @@
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=1));
+insert into notes values('12/01/2018',10,(select ref(e) from etudiants e  where e.firstname='ktami' ),(select ref(e) from elements e where e.id_element=2));
+insert into notes values('12/01/2018',17,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=3));
+insert into notes values('12/01/2018',12,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=4));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami') ,(select ref(e) from elements e where e.id_element=5));
+insert into notes values('12/01/2018',11,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=6));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=7));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=8));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=9));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=10));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=11));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=12));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=13));
+
+
+
+
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=14));
+insert into notes values('12/01/2018',10,(select ref(e) from etudiants e  where e.firstname='ktami' ),(select ref(e) from elements e where e.id_element=15));
+insert into notes values('12/01/2018',17,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=16));
+insert into notes values('12/01/2018',12,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=17));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami') ,(select ref(e) from elements e where e.id_element=18));
+insert into notes values('12/01/2018',11,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=19));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=20));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=21));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=22));
+insert into notes values('12/01/2018',13,(select ref(e) from etudiants e  where e.firstname='ktami'),(select ref(e) from elements e where e.id_element=23));
+

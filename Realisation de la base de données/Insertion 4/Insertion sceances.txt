@@ -1,0 +1,14 @@
+insert into sceances values(15,(select ref(e) from elements e where id_element=3),null,null,'11/11/2019');
+insert into sceances values(16,(select ref(e) from elements e where id_element=3),null,null,'17/11/2019');
+insert into sceances values(17,(select ref(e) from elements e where id_element=3),null,null,'23/11/2019');
+insert into sceances values(18,(select ref(e) from elements e where id_element=3),null,null,'26/11/2019');
+insert into sceances values(19,(select ref(e) from elements e where id_element=3),null,null,'30/11/2019');
+insert into sceances values(20,(select ref(e) from elements e where id_element=3),null,null,'11/12/2019');
+insert into sceances values(21,(select ref(e) from elements e where id_element=3),null,null,'15/12/2019');
+insert into sceances values(23,(select ref(e) from elements e where id_element=4),null,null,'17/12/2019');
+insert into sceances values(24,(select ref(e) from elements e where id_element=4),null,null,'20/12/2019');
+insert into sceances values(25,(select ref(e) from elements e where id_element=4),null,null,'26/12/2019');
+insert into sceances values(26,(select ref(e) from elements e where id_element=4),null,null,'30/12/2019');
+insert into sceances values(27,(select ref(e) from elements e where id_element=4),null,null,'2/1/2020');
+insert into sceances values(28,(select ref(e) from elements e where id_element=4),null,null,'11/1/2020');
+insert into sceances values(29,(select ref(e) from elements e where id_element=4),null,null,'17/1/2020');

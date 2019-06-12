@@ -1,0 +1,6 @@
+insert into filieres values(1,'informatique',(select ref(e) from enseignants e where e.lastname='beradda'),null);
+insert into filieres values(2,'physique',(select ref(e) from enseignants e where e.lastname='khamlichi'),null);
+insert into filieres values(3,'chimie',(select ref(e) from enseignants e where e.lastname='chawi'),null);
+insert into filieres values(4,'electronique',(select ref(e) from enseignants e where e.lastname='fadili'),null);
+
+

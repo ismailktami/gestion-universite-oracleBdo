@@ -1,0 +1,12 @@
+insert into modules values(1,'programmation1',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(2,'reseaux1',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(3,'mysql',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(4,'system exploitation',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(5,'embarques1',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(6,'management',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(7,'tec_anglais',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(8,'réseaux2',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(9,'developement web',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(10,'developement desktop',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(11,'archit_logiciel',1,null,(select ref(f) from filieres f where f.nom='informatique')); 
+insert into modules values(12,'tec_anglais2',1,null,(select ref(f) from filieres f where f.nom='informatique')); 

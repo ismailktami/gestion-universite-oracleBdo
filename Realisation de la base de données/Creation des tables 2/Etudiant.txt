@@ -1,0 +1,1 @@
+create table etudiants of t_etudiant;

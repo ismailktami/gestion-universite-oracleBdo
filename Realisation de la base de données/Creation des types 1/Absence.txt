@@ -1,0 +1,6 @@
+create or replace
+type t_absence as object(
+id_absence number, 
+refetudiant ref t_etudiant,
+refsceance ref t_sceance
+);

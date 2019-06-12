@@ -1,0 +1,33 @@
+create or replace type body t_person as
+constructor function t_person return self as result as
+begin
+return;
+end;
+member function tostring return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from persons;
+return l_rc;
+end tostring;
+member function addperson(pr t_person)
+return number as n number;
+begin
+insert into persons values(pr.firstname,pr.lastname,pr.birthplace,pr.birthdate,pr.cin,pr.phone,pr.email);
+n:=1;
+return n;
+end addperson;
+member function updateperson(pers_cin varchar,person t_person) return number as n number;
+begin
+update persons set firstname=person.firstname where pers_cin=person.cin;
+return 1;
+end updateperson;
+member function deleteperson(pers_cin varchar) return number as n number;
+begin
+delete from persons pr where pr.cin=pers_cin;
+return 1;
+end deleteperson;
+member function getperson(pers_cin varchar) return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from persons p where p.cin=pers_cin;
+return l_rc;
+end getperson;
+end;

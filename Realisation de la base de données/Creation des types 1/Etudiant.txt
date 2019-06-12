@@ -1,0 +1,13 @@
+create or replace
+type t_etudiant  under t_person
+(
+cne varchar2(22),
+niveau number(11),
+ref_filiere ref t_filiere ,
+constructor function t_etudiant return  self  as result,
+OVERRIDING member function tostring return sys_refcursor,
+OVERRIDING member function deleteperson(pers_cin VARCHAR) return number
+)
+ alter type t_etudiant add  member function updateetudiant(et t_etudiant) return number cascade
+ alter type t_etudiant add member function getNotes(pers_cin varchar) return sys_refcursor cascade
+ alter type t_etudiant add  member function updateetudiante(et t_etudiant,p t_person) return number cascade

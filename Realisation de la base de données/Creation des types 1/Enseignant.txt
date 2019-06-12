@@ -1,0 +1,13 @@
+create or replace
+type t_enseignant  under t_person
+(
+cnen varchar2(22),
+salaire number(11),
+grade varchar2(20),
+constructor function t_enseignant return  self  as result,
+OVERRIDING member function tostring return sys_refcursor,
+OVERRIDING member function deleteperson(pers_cin VARCHAR) return number
+)
+ alter type t_enseignant add member function updateenseignant(salaire_ens number,grade_ens VARCHAR) return number cascade
+ alter type t_enseignant drop member function updateenseignant(salaire_ens number,grade_ens VARCHAR) return number cascade
+ alter type t_enseignant add member function updateenseignant(salaire_ens number,grade_ens VARCHAR,person t_person) return number cascade

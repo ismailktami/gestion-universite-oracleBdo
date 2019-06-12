@@ -1,0 +1,14 @@
+create or replace
+type t_module as OBJECT(
+id_module number(11),
+nom varchar2(20),
+niveau number(11),
+elements tab_elements,
+ref_filiere ref t_filiere
+)
+ alter type t_module add  constructor function t_module return  self  as result cascade
+ alter type t_module add member function updatemodule(module t_module ) return number cascade
+ alter type t_module add member function deleteemodule(nummodule number) return number cascade
+ alter type t_module add member function tostring return sys_refcursor cascade
+ alter type t_module add member function getmodule(nummodule number) return sys_refcursor CASCADE
+

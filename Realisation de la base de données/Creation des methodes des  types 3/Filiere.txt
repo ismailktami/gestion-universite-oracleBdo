@@ -1,0 +1,28 @@
+
+ create or replace type body t_filiere as
+constructor function t_filiere return self as result as
+begin
+return;
+end;
+member function updatefiliere(filiere t_filiere ) return number as n number;
+begin
+update filieres set nom=filiere.nom , responsabe= filiere.responsabe where id_filiere=filiere.id_filiere;
+return 1;
+end updatefiliere;
+member function deleteefiliere(numfiliere number) return number as n number;
+begin
+delete from filieres s where s.id_filiere=numfiliere;
+return 1;
+end deleteefiliere;
+member function tostring return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from filieres;
+return l_rc;
+end tostring;
+
+member function getfiliere(numfiliere number) return sys_refcursor as l_rc sys_refcursor;
+begin
+open l_rc for select * from filieres s where s.id_filiere=numfiliere;
+return l_rc;
+end getfiliere;
+end;

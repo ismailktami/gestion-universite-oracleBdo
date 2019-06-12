@@ -1,0 +1,12 @@
+create or replace
+type t_element as object
+(
+id_element number,
+nom varchar2(40),
+refmodule ref t_module
+)
+ alter type t_element add member function updateelement(element t_element ) return number cascade
+ alter type t_element add member function deleteelement(numelement number) return number cascade
+ alter type t_element add member function tostring return sys_refcursor cascade
+ alter type t_element add member function getelement(numelement number) return sys_refcursor CASCADE
+ alter type t_element add  constructor function t_element return  self  as result cascade

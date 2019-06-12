@@ -1,0 +1,21 @@
+create or replace
+type t_person as object
+(
+firstname VARCHAR2(30),
+lastname VARCHAR2(30),
+birthplace VARCHAR2(20),
+birthdate VARCHAR2(20),
+cin VARCHAR2(10),
+phone VARCHAR2(20),
+email VARCHAR2(40)
+)not final
+ alter type t_person add constructor function t_person return self as result cascade
+ alter type t_person add member function tostring return sys_refcursor cascade
+ alter type t_person add member function addperson(pr t_person) return number cascade
+ alter type t_person add member function deleteperson(pers_cin varchar) return number cascade
+ alter type t_person add member function getperson(pers_cin varchar) return sys_refcursor cascade
+ alter type t_person add member function updateperson(pers_cin varchar,person t_person) return number cascade
+
+
+
+

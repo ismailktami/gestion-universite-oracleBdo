@@ -1,0 +1,1 @@
+create table absences of t_absences;

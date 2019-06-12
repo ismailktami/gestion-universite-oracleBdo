@@ -1,0 +1,13 @@
+create or replace
+type t_salle as object (
+numsale varchar2(20),
+nbrplace number(11),
+ref_filiere ref t_filiere,
+constructor function t_salle return  self  as result
+)
+ alter type t_salle add member function updatesalle(salle t_salle ) return number cascade
+ alter type t_salle add member function deletesalle(numsalle number) return number cascade
+ alter type t_salle add member function tostring return sys_refcursor cascade
+ alter type t_salle add member function getsalle(numsalle number) return sys_refcursor CASCADE
+
+
